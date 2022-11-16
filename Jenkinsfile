@@ -9,13 +9,13 @@ pipeline {
               echo 'successfully'
                 sh 'mvn clean install'                
             }
-            post{
-                 success{
-                     echo "Archiving the Artifacts"
-                     archiveArtifacts artifacts: '**/target/*war'
+//             post{
+//                  success{
+//                      echo "Archiving the Artifacts"
+//                      archiveArtifacts artifacts: '**/target/*war'
                     
-                 }
-            }
+//                  }
+//             }
         }
    
         stage ('Deloy') {
