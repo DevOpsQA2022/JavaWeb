@@ -7,7 +7,7 @@ pipeline {
         stage ('Build') {
             steps {
               echo 'successfully'
-                sh 'mvn clean install -f JavaWeb/pom.xml'                
+                sh 'mvn clean install'                
             }
             post{
                  success{
